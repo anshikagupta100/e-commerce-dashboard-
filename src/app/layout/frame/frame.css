@@ -1,0 +1,30 @@
+.app-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content";
+  height: 100vh;
+  width: 100vw;
+}
+
+.app-navbar {
+  grid-area: navbar;
+  background-color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
+}
+
+.app-sidebar {
+  grid-area: sidebar;
+  background-color: #0f172a;
+  color: white;
+}
+
+.app-content {
+  grid-area: content;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
