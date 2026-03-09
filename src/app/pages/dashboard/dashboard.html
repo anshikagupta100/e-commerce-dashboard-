@@ -1,5 +1,10 @@
 <div class="dashboard-content">
-  <h2 class="page-title">Dashboard Overview</h2>
+  <div class="header-section">
+    <h2 class="page-title">Dashboard Overview</h2>
+    <button class="add-user-btn" (click)="openUserForm()">
+      <i class="bi bi-person-plus"></i> Add New User
+    </button>
+  </div>
 
   <div class="stats-grid">
     <div class="stat-card">
@@ -36,19 +41,18 @@
   </div>
 
   <div class="charts-section">
-    <div class="chart-container">
+    <div class="chart-box pie-box">
       <h4 class="chart-title">Sales by Category</h4>
       <div class="canvas-wrapper">
         <canvas #pieChart></canvas>
       </div>
     </div>
 
-    <div class="chart-container">
+    <div class="chart-box bar-box">
       <h4 class="chart-title">Weekly Revenue</h4>
       <div class="canvas-wrapper">
         <canvas #barChart></canvas>
       </div>
     </div>
-    
   </div>
 </div>

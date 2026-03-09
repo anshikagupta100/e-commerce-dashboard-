@@ -1,12 +1,13 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
-
+import { MatDialog, MatDialogModule } from '@angular/material/dialog'; 
+import { UserFormComponent } from '../user-form/user-form'; 
 Chart.register(...registerables);
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [],
+  imports: [MatDialogModule], 
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
@@ -14,8 +15,23 @@ export class Dashboard implements AfterViewInit {
   @ViewChild('pieChart') pieChart!: ElementRef;
   @ViewChild('barChart') barChart!: ElementRef;
 
+  constructor(private dialog: MatDialog) {}
+
   ngAfterViewInit() {
     this.renderCharts();
+  }
+
+  openUserForm() {
+    const dialogRef = this.dialog.open(UserFormComponent, {
+      width: '400px',
+      disableClose: true
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        console.log('New User Data received from form:', result);
+      }
+    });
   }
 
   renderCharts() {

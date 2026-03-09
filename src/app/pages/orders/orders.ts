@@ -12,7 +12,7 @@ import { MatTableModule } from '@angular/material/table';
 export class Orders {
   displayedColumns: string[] = ['orderId', 'customer', 'date', 'amount', 'status'];
   orders = [
-    { id: '#ORD-7712', customer: 'John Doe', date: 'Oct 24, 2023', amount: '$120.00', status: 'Shipped' },
-    { id: '#ORD-7713', customer: 'Jane Smith', date: 'Oct 25, 2023', amount: '$85.50', status: 'Pending' }
+    { id: '#ORD-1234', customer: 'anshika', date: 'feb 9 2026', amount: '$120.00', status: 'Shipped' },
+    { id: '#ORD-4321', customer: 'kirti', date: 'feb 09 2025', amount: '$85.50', status: 'Pending' }
   ];
 }
