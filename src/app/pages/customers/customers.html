@@ -1,1 +1,22 @@
-<p>customers works!</p>
+<div class="page-container">
+  <div class="header-section">
+    <h1>Customers</h1>
+    <div class="actions">
+      <input type="text" class="search-input" placeholder="Search customers...">
+    </div>
+  </div>
+
+  <div class="customer-grid">
+    <div class="customer-card mat-elevation-z1" *ngFor="let i of [1,2,3,4]">
+      <div class="avatar">JD</div>
+      <div class="info">
+        <h3>John Doe</h3>
+        <p>john.doe@example.com</p>
+      </div>
+      <div class="stats">
+        <span><strong>12</strong> Orders</span>
+        <span><strong>$1,200</strong> Spent</span>
+      </div>
+    </div>
+  </div>
+</div>
